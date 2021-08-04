@@ -26,7 +26,18 @@ class PlayerCharacter:
   def shout(self):
     print(f'my name is {self.name}')
 
+  #Decorator -> with a class method, it can be called even if the class is not instantiated first
+  @classmethod
+  def adding_things(cls, num1, num2):
+    return num1 + num2
+
+  @staticmethod #we don't get access to the class parameters cls method
+  def adding_things2(num1,num2):
+    return num1, num2
+
+print(PlayerCharacter.adding_things(4,5))
 player1 = PlayerCharacter("JRyan",14)
+print(player1.adding_things(2,3))
 print(player1.name)
 print(player1.run()) #run done
 print(player1.membership) #True
@@ -82,3 +93,5 @@ def older(cat1, cat2,cat3):
 x = older(cat1, cat2,cat3)
 # 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
 print(f'The oldest cat is {x} years old ')
+
+
