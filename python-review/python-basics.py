@@ -255,3 +255,87 @@ print(total) #55
 #Range object 
 for item in range(10):
   print(item) # will print 0 to 9
+
+for _ in range(0,10,2):
+  print(_) # will print 0,2,4,6,8
+
+for _ in range(5):
+  print(list(range(10)))
+'''
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+'''
+
+#Enumerate will give you an index in an enumerable item
+for i,char in enumerate('Helllloooo'):
+  print(i, char)
+'''
+0 H
+1 e
+2 l
+3 l
+4 l
+5 l
+6 o
+7 o
+8 o
+9 o
+'''
+
+for i, char in enumerate((list(range(100)))):
+  if char == 50:
+    print(i, char)
+
+#while loop -> while a condition is true do something
+i = 0
+while i < 10:
+  print(i)
+  i = i + 1
+
+# while True:
+#   response = input("say something: ")
+#   if (response == "bye"):
+#     break
+
+picture = [ 
+  [0,0,0,1,0,0,0],
+  [0,0,1,1,1,0,0],
+  [0,1,1,1,1,1,0],
+  [1,1,1,1,1,1,1],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0],
+]
+
+# iterate over picture
+  # if 0 -> print " "
+  # if 1 -> print *
+
+for row in picture:
+  for pixel in row:
+    if (pixel == 1):
+      print("*", end=" ")
+    else:
+      print(" ", end=" " )  
+  print(" ") #need a new line after every row
+'''
+      *        
+    * * *      
+  * * * * *    
+* * * * * * *  
+      *        
+      *  
+'''
+
+#Find duplicates
+some_list = [
+  'a','b','c','b','c','m','n','n'
+]
+duplicates = []
+for value in some_list:
+  if some_list.count(value) > 1:
+    if value not in duplicates:
+      duplicates.append(value)
+print(duplicates)
