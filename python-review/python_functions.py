@@ -85,7 +85,7 @@ print(a)
 #Scope -> what variables do I have access to?
 #Rules:
 #1 - start with local
-#2 - Parent locas?
+#2 - Parent locals?
 #3 - Global
 #4 - built in python functions
 
