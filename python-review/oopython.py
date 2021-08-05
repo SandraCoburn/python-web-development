@@ -94,4 +94,48 @@ x = older(cat1, cat2,cat3)
 # 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
 print(f'The oldest cat is {x} years old ')
 
+#FOUR PILLARS OF OOP
+#Encapsulation is the binding of data and functions that manipulates that data -> bluprint to pass on to instances of that object
+# Abstraction is getting access to only what is needed
+#PRIVATE attributes: self._name -> the underscores let other developers know it's a private variable
 
+
+#INHERITANCE
+class User:
+  def sign_in(self):
+    print('logged in')
+
+class Wizard(User):
+  def __init__(self, name, power) -> None:
+      self.name = name
+      self.power = power
+
+  def attack(self):
+      print(f'attacking with power of:   {self.power}')
+
+class Archer(User):
+  def __init__(self, name, num_arrows) -> None:
+      self.name = name
+      self.num_arrows = num_arrows
+  def attack(self):
+      print(f'attacking with arrows, arrows left:  {self.num_arrows}')
+
+
+wizard1 = Wizard("Merlin", 50)
+archer1 = Archer("Robin", 100)
+
+print(isinstance(wizard1, User)) #True
+
+print(wizard1.sign_in())
+wizard1.attack()
+archer1.attack()
+
+#Polymorphism -> we can modify our classes when needed
+def player_attack(char):
+  char.attack()
+
+player_attack(wizard1)
+player_attack(archer1)
+print("*****************************************")
+for char in [wizard1,archer1]:
+  char.attack()
