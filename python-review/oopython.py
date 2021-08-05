@@ -102,11 +102,16 @@ print(f'The oldest cat is {x} years old ')
 
 #INHERITANCE
 class User:
+  def __init__(self,email):
+    self.email = email
+
   def sign_in(self):
     print('logged in')
 
 class Wizard(User):
-  def __init__(self, name, power) -> None:
+  def __init__(self, name, power,email) -> None:
+      User.__init__(self, email)
+      
       self.name = name
       self.power = power
 
@@ -114,21 +119,24 @@ class Wizard(User):
       print(f'attacking with power of:   {self.power}')
 
 class Archer(User):
-  def __init__(self, name, num_arrows) -> None:
+  def __init__(self, name, num_arrows, email) -> None:
+      super().__init__(email)
       self.name = name
       self.num_arrows = num_arrows
   def attack(self):
       print(f'attacking with arrows, arrows left:  {self.num_arrows}')
 
 
-wizard1 = Wizard("Merlin", 50)
-archer1 = Archer("Robin", 100)
+wizard1 = Wizard("Merlin", 50, "merlin@wizard.com")
+archer1 = Archer("Robin", 100, "robin@archers.com")
 
 print(isinstance(wizard1, User)) #True
 
 print(wizard1.sign_in())
 wizard1.attack()
 archer1.attack()
+print(wizard1.email)
+print(archer1.email)
 
 #Polymorphism -> we can modify our classes when needed
 def player_attack(char):
