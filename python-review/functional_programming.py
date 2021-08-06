@@ -67,3 +67,18 @@ print(total)
 #or
 print(reduce(accumulator, (my_numbers + scores)))
 
+#Lambda expresions -> anonymous functions that we need to use only once so they don't need a name
+## lambda param: action(param)
+
+print(list(map(lambda item: item *8, scores)))
+print(list(filter(lambda item: item % 2 != 0, scores)))
+print(reduce(lambda acc, item: acc + item, scores))
+
+another_list = [5,4,3]
+print(list(map(lambda item: item **2, another_list)))
+
+#List sorting
+tuple_list = [(90,2),(4,3), (9,9), (10,-1)]
+
+tuple_list.sort(key=lambda x: x[1])
+print(tuple_list)
