@@ -82,3 +82,34 @@ tuple_list = [(90,2),(4,3), (9,9), (10,-1)]
 
 tuple_list.sort(key=lambda x: x[1])
 print(tuple_list)
+
+# List, set, dictionary Comprehension -> my_list = [param for param in iterable]
+
+#list
+comp_list = [char for char in "hello"]
+print(comp_list) #['h', 'e', 'l', 'l', 'o']
+
+range_list = [num for num in range(0,20)]
+print(range_list)
+
+range_list_mult = [num ** 2 for num in range(0,20) if num % 2 ==0] # -> loop through a list return every number to power of 2 if the number is even
+print(range_list_mult)
+
+# set
+comp_set = {char for char in "hello"}
+print(comp_set) #{'o', 'h', 'e', 'l'}
+range_set = {num for num in range(0,20)}
+print(range_set)
+range_set_mult = {num ** 2 for num in range(0,20) if num % 2 ==0} 
+print(range_set_mult)
+
+#dictionary
+simple_dict = {'a':1, 'b':2}
+my_dict = {key: value**2 for key,value in simple_dict.items() if value %2 == 0} #{'b': 4}
+print(my_dict)
+another_dict = {num: num*2 for num in [1,2,3,4]}
+print(another_dict)
+
+duplicate_list = ['a','b','c','b','d','n','n']
+duplicates = list(set([item for item in duplicate_list if duplicate_list.count(item) > 1])) #['n', 'b']
+print(duplicates)
