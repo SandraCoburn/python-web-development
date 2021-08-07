@@ -5,7 +5,8 @@ Web Development with Python - Practice
 ## Teck Stack
 
 - HTML
-- Python
+- [Python](https://documentation.help/Python-3.6.1/py-modindex.html) Module Index
+- [Python](https://pypi.org/) Package Index -> Community developed packages
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/api/) is a lightweight WSGI web application framework. It is <strong>designed to make getting started quick and easy, with the ability to scale up to complex applications.</strong> It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
 - [venv](https://docs.python.org/3/library/venv.html) -> Creation of virtual environments
 
