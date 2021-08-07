@@ -72,3 +72,24 @@ def long_time():
     i*5
 
 long_time()
+
+
+# Create an @authenticated decorator that only allows the function to run is user1 has 'valid' set to True:
+user1 = {
+    'name': 'Sorna',
+    'valid': True #changing this will either run or not run the message_friends function.
+}
+
+def authenticated(fn):
+  def wrapper(*args,**kwargs):
+    print(args)
+    for v in args:
+      if v['valid'] == True:
+        return fn(*args, **kwargs)
+  return wrapper
+
+@authenticated
+def message_friends(user):
+    print('message has been sent')
+
+message_friends(user1)
