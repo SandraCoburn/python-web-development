@@ -59,3 +59,8 @@ def show_post(post_id):
   - text/html
   - text/javascript
   - image types -> png, jpg, etc
+- Sorting dictionaries:
+```
+def sort_stories_by_votes(dictionary):
+    return sorted(dictionary, key= lambda k:k['votes'])
+```
