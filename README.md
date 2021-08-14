@@ -9,6 +9,10 @@ Web Development with Python - Practice
 - [Python](https://pypi.org/) Package Index -> Community developed packages
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/api/) is a lightweight WSGI web application framework. It is <strong>designed to make getting started quick and easy, with the ability to scale up to complex applications.</strong> It began as a simple wrapper around Werkzeug and Jinja and has become one of the most popular Python web application frameworks.
 - [venv](https://docs.python.org/3/library/venv.html) -> Creation of virtual environments
+- [Hatchful](https://hatchful.shopify.com/) - Generate free logos
+- [Selenium Easy](https://www.seleniumeasy.com/) -> Browser automation/Testing
+- [Python Selenium commands cheat sheet](http://allselenium.info/python-selenium-commands-cheat-sheet-frequently-used/)
+- [Seleniumeasy](https://www.seleniumeasy.com/test/)
 
 ### Most Used CL commands in this app
 
